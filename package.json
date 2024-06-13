@@ -35,7 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "dotenv-cli": "^7.4.2",
-    "eslint": "v8",
+    "eslint": "v9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "fs-extra": "^11.2.0",

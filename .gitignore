@@ -1,2 +1,4 @@
 node_modules/
 built/
+eslint.results.json
+eslint_report.json

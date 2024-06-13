@@ -1,17 +1,17 @@
 import { spawnSync } from 'child_process';
 import { readdirSync } from 'fs';
-// import fse from 'fs-extra';
+import fse from 'fs-extra';
 import path, { basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { registerWriteHook } from './helpers.js';
 import { infoLog, infoTable } from './log.js';
 
 const TAG = 'MAIN';
-// const { copyFileSync } = fse;
+const { copyFileSync } = fse;
 
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
-const defaultExcludedScripts = ['pretty-manifest', 'font-glyph-enums'];
+const defaultExcludedScripts = [''];
 
 // These scripts generate data needed by other scripts,
 // so they need to run first in this order
@@ -20,7 +20,7 @@ const prioritizedScripts = [''];
 const toCompileOutputs = ['d2-font-glyphs.ts'];
 const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
-//const copyDataToOutput = [''];
+const copyDataToOutput = ['d2-font-glyphs.ts'];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
@@ -101,9 +101,9 @@ for (const tsFile of tsFiles) {
   totalJsRunTime += runtime[jsFile];
 }
 
-//for (const toCopyFile of copyDataToOutput) {
-//  copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
-//}
+for (const toCopyFile of copyDataToOutput) {
+  copyFileSync(`./data/${toCopyFile}`, `./output/${toCopyFile}`);
+}
 
 const runtimes = Object.entries(runtime).sort((a, b) => b[1] - a[1]);
 infoTable(runtimes);

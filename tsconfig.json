@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "strict": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "lib": ["ES2020", "DOM"],
+    "target": "ESnext",
+    "module": "ESnext",
+    "rootDir": ".",
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "output/*": ["output/*"],
+      "data/*": ["data/*"]
+    }
+  }
+}

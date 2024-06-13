@@ -1,0 +1,5 @@
+Destiny-2-Font-Symbols
+data/**/*.json
+output/**/*.json
+built/*
+.vscode

@@ -1,0 +1,25 @@
+{
+    "editor.tabSize": 2,
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.formatOnSave": true,
+    "files.readonlyInclude": {
+      "node_modules/**": true,
+      "built/**": true,
+    },
+    "cSpell.language": "en",
+    "cSpell.enabledLanguageIds": ["jsonc", "json", "markdown", "typescript", "javascript"],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.ignorePaths": [
+      "package.json",
+      ".github",
+      ".vscode",
+      "built",
+      "node_modules",
+      "output",
+      ".eslintrc",
+      "pnpm.lock",
+    ],
+    "cSpell.words": []
+  }

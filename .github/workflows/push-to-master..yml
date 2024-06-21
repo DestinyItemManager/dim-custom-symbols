@@ -1,0 +1,47 @@
+name: Push to Master
+on:
+  push:
+    branches: ['master']
+    paths: ['output/**']
+
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout - DCS
+        uses: actions/checkout@v4
+        with:
+          path: 'dcs'
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+          submodules: recursive
+
+      - name: Checkout - D2AI
+        uses: actions/checkout@v4
+        with:
+          repository: DestinyItemManager/d2-additional-info
+          path: 'd2ai'
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+
+      - name: Update D2AI with new info from DCS
+        id: D2AI
+        working-directory: d2ai
+        run: find /data/font/* -delete && cp -f ../dcs/output/* ./data/font/
+
+      - name: Create Pull Request (DIM)
+        uses: peter-evans/create-pull-request@v6
+        with:
+          path: 'd2ai'
+          token: ${{ secrets.PAT }}
+          commit-message: Custom Symbols Update
+          committer: D2AI Bot <destinyitemmanager@gmail.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          title: '[DCS] Symbols Update'
+          labels: dcs, automated pr, no changelog
+          branch: dcs-build

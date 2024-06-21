@@ -1,3 +1,4 @@
+import { load, setApiKey } from '@d2api/manifest-node';
 import { spawnSync } from 'child_process';
 import { readdirSync } from 'fs';
 import fse from 'fs-extra';
@@ -9,6 +10,9 @@ import { infoLog, infoTable } from './log.js';
 const TAG = 'MAIN';
 const { copyFileSync } = fse;
 
+setApiKey(process.env.API_KEY);
+await load();
+
 const scriptRegex = /generate-([a-zA-Z\\-]+)\.ts/;
 
 const defaultExcludedScripts = [''];
@@ -17,10 +21,10 @@ const defaultExcludedScripts = [''];
 // so they need to run first in this order
 const prioritizedScripts = [''];
 // If a script outputs one of these files, compile it
-const toCompileOutputs = ['d2-font-glyphs.ts'];
+const toCompileOutputs = ['d2-font-glyphs.ts', 'dim-custom-symbols.ts'];
 const outputDirectories = ['data', 'output'];
 // These files should be copied verbatim from data/ to output/
-const copyDataToOutput = ['d2-font-glyphs.ts'];
+const copyDataToOutput = ['d2-font-glyphs.ts', 'dim-custom-symbols.ts'];
 
 // Read all `generate-` files
 const scriptsDir = dirname(fileURLToPath(import.meta.url));

@@ -1,3 +1,4 @@
 node_modules/
 built/
 manifests/
+eslint*.json

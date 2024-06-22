@@ -25,7 +25,7 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Generate new D2AI information
+      - name: Generate new DCS information
         run: pnpm generate-data
 
       - name: porcelain check
@@ -43,7 +43,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: DCS - Update Symbols - Manifest v${{ github.event.client_payload.config.env.MANIFEST_VERSION }}
-          committer: D2AI Bot <destinyitemmanager@gmail.com>
+          committer: DIM Font Bot <destinyitemmanager@gmail.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           title: '[DCS] Manifest Update'
           body: |

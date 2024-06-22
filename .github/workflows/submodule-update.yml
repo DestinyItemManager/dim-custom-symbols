@@ -46,7 +46,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: submodule update
-          committer: D2AI Bot <destinyitemmanager@gmail.com>
+          committer: DIM Font Bot <destinyitemmanager@gmail.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           title: 'submodule update: generate-font'
           body: |

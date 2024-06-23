@@ -24,8 +24,8 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.arc_warlock_super, 'Stormtrance'],
   [FontGlyphs.arc_beam, 'Chaos Reach'],
   // Solar
-  [FontGlyphs.golden_gun, 'Golden Gun - Deadshot'],
-  [DimCustomSymbols.golden_gun_marksman, 'Golden Gun - Marksman'],
+  [FontGlyphs.golden_gun, 'Golden Gun: Deadshot'],
+  [DimCustomSymbols.golden_gun_marksman, 'Golden Gun: Marksman'],
   [FontGlyphs.thermal_knives, 'Blade Barrage'],
   [FontGlyphs.solar_tian_super, 'Hammer of Sol'],
   [FontGlyphs.thermal_maul, 'Burning Maul'],

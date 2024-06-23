@@ -1,7 +1,7 @@
-name: Push to Master
+name: Push to Main
 on:
   push:
-    branches: ['master']
+    branches: ['main']
     paths: ['output/**']
 
 # Ensures that only one deploy task per branch/environment will run at a time.

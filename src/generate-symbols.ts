@@ -23,6 +23,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.meteor_strike, 'Thundercrash'],
   [FontGlyphs.arc_warlock_super, 'Stormtrance'],
   [FontGlyphs.arc_beam, 'Chaos Reach'],
+  [FontGlyphs.arc_hunter_blink_dagger, "Storm's Edge"],
   // Solar
   [FontGlyphs.golden_gun, 'Golden Gun: Deadshot'],
   [DimCustomSymbols.golden_gun_marksman, 'Golden Gun: Marksman'],
@@ -32,6 +33,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.warlock_blade, 'Daybreak'],
   [DimCustomSymbols.daybreak, 'Daybreak'],
   [FontGlyphs.healing_sword, 'Well of Radiance'],
+  [FontGlyphs.solar_warlock_phoenix_form, 'Song of Flame'],
   // Void
   [FontGlyphs.void_hunter_super, 'Shadowshot: Deadfall'],
   [DimCustomSymbols.shadowshot_moebius_quiver, 'Shadowshot: Moebius Quiver'],
@@ -43,6 +45,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [DimCustomSymbols.nova_bomb_cataclysm, 'Nova Bomb: Cataclysm'],
   [DimCustomSymbols.nova_bomb_vortex, 'Nova Bomb: Vortex'],
   [FontGlyphs.nova_pulse, 'Nova Warp'],
+  [FontGlyphs.void_titan_axe_throw, 'Twilight Arsenal'],
   // Stasis
   [FontGlyphs.stasis_hunter_super, 'Silence and Squall'],
   [FontGlyphs.stasis_titan_super, 'Glacial Quake'],
@@ -72,6 +75,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.hammer_throw_melee, 'Throwing Hammer'],
   [DimCustomSymbols.celestial_fire, 'Celestial Fire'],
   [FontGlyphs.solar_blast, 'Incinerator Snap'],
+  [FontGlyphs.solar_drone, 'Hellion'],
   // Void
   [DimCustomSymbols.snare_bomb, 'Snare Bomb'],
   [FontGlyphs.hunter_smoke, 'Corrosive Smoke'],
@@ -122,6 +126,10 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.strand_suspend_grenade, 'Shackle Grenade'],
   [FontGlyphs.strand_threadling_grenade, 'Threadling Grenade'],
   [FontGlyphs.strand_grappling_hook, 'Grapple'],
+  // Prismatic
+  [FontGlyphs.prism_hunter_grenade, 'Hailfire Spike'],
+  [FontGlyphs.prism_titan_grenade, 'Electrified Snare'],
+  [FontGlyphs.prism_warlock_grenade, 'Freezing Singularity'],
 
   // Class Abilities
   [DimCustomSymbols.class_abilities, 'Class Abilities'],
@@ -129,6 +137,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [DimCustomSymbols.dodge_gamblers, "Gambler's Dodge"],
   [DimCustomSymbols.dodge_marksmans, "Marksman's Dodge"],
   [DimCustomSymbols.dodge_acrobats, "Acrobat's Dodge"],
+  [FontGlyphs.arc_hunter_air_move, 'Ascension'],
   // Titan
   [DimCustomSymbols.barricade_rally, 'Rally Barricade'],
   [DimCustomSymbols.barricade_towering, 'Towering Barricade'],
@@ -291,6 +300,8 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.headshot, '[Headshot]'],
   [FontGlyphs.spear_launcher], // Scorch Cannon
   [DimCustomSymbols.hive_relic], // Hive Sword
+  [FontGlyphs.void_titan_axe_throw_relic], // Void Axe
+  [FontGlyphs.void_titan_exotic_chest, 'Rocket Tracers'],
 
   // Damage Types
   [FontGlyphs.arc, '[Arc]'],
@@ -300,6 +311,8 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.strand_kill, '[Strand]'],
   [FontGlyphs.environment_hazard],
   [DimCustomSymbols.damage_kinetic, 'Kinetic'],
+  [FontGlyphs.light_ability], // Light Ability (circle with lines)
+  [FontGlyphs.darkness_ability], // Darkness Ability (triangle with lines)
 
   // Weapon Stats
   [DimCustomSymbols.accuracy, 'Accuracy'],

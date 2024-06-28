@@ -2,7 +2,7 @@ import { getAllDefs } from '@d2api/manifest-node';
 import { FontGlyphs } from '../data/d2-font-glyphs.js';
 import { DimCustomSymbols } from '../data/dim-custom-symbols.js';
 import { writeFile } from './helpers.js';
-import { warnLog } from './log.js';
+import { errorLog, warnLog } from './log.js';
 
 const TAG = 'SYMBOLS';
 
@@ -195,7 +195,6 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.void_quickfall],
   [DimCustomSymbols.vanishing_step, 'Vanishing Step'],
   [DimCustomSymbols.bastion, 'Bastion'],
-  [FontGlyphs.balloom, 'Controlled Demolition'],
   [DimCustomSymbols.offensive_bulwark, 'Offensive Bulwark'],
   [DimCustomSymbols.chaos_accelerant, 'Chaos Accelerant'],
   [FontGlyphs.void_soul, 'Child of the Old Gods'],
@@ -257,21 +256,11 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.strand_infest, 'Sever'],
   [DimCustomSymbols.suspend, 'Suspend'],
   [FontGlyphs.strand_tangle, 'Tangle'],
-  [FontGlyphs.strand_suspend_grenade, 'Shackle Grenade'],
-  [FontGlyphs.strand_threadling_grenade, 'Threadling Grenade'],
-  [FontGlyphs.strand_grappling_hook, 'Grapple'],
-  [FontGlyphs.strand_severing_leap_melee, 'Frenzied Blade'],
-  [FontGlyphs.strand_titan_suspend_brace, "Drengr's Lash"],
   [FontGlyphs.strand_titan_slide_melee, 'Flechette Storm'],
-  [FontGlyphs.strand_rope_dart_melee, 'Threaded Spike'],
-  [FontGlyphs.strand_hunter_quickfall, 'Ensnaring Slam'],
   [FontGlyphs.strand_hunter_clone, 'Threaded Specter'],
   [FontGlyphs.strand_hunter_buzzsaw, 'Whirling Maelstrom'],
-  [FontGlyphs.strand_seize_melee, 'Arcane Needle'],
   [FontGlyphs.strand_warlock_suspend_tangle, 'The Wanderer'],
-  [FontGlyphs.strand_threadling, 'Threadling'],
   [DimCustomSymbols.unravel, 'Unravel'],
-  [DimCustomSymbols.into_the_fray, 'Woven Mail'],
 
   // Weapons
   // Primary
@@ -490,7 +479,14 @@ const findSource: (name: string) => Source | undefined = (name: string) => {
   }
 };
 
+const seenGlyphs = new Set<number>();
+let hasDupes = false;
 for (const [glyph, name] of data) {
+  if (seenGlyphs.has(glyph)) {
+    errorLog(TAG, `symbol names: duplicate glyph ${glyph} ${name}`);
+    hasDupes = true;
+  }
+  seenGlyphs.add(glyph);
   if (name) {
     const source = findSource(name);
     output.push({ codepoint: glyph, glyph: String.fromCodePoint(glyph), source });
@@ -502,6 +498,9 @@ for (const [glyph, name] of data) {
     output.push({ codepoint: glyph, glyph: String.fromCodePoint(glyph) });
     translateManually.push(glyph);
   }
+}
+if (hasDupes) {
+  throw new Error('Duplicate glyphs');
 }
 
 const outString =

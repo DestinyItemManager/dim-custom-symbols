@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "tsc && resolve-tspaths",
+    "install": "git submodule update --init --recursive",
     "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "fix:eslint": "pnpm lint:eslint --fix",
     "fix:prettier": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",

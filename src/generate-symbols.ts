@@ -300,6 +300,7 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [FontGlyphs.strand_kill, '[Strand]'],
   [FontGlyphs.environment_hazard],
   [DimCustomSymbols.damage_kinetic, 'Kinetic'],
+  [DimCustomSymbols.prismatic],
   [FontGlyphs.light_ability], // Light Ability (circle with lines)
   [FontGlyphs.darkness_ability], // Darkness Ability (triangle with lines)
 

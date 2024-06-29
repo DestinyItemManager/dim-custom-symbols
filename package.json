@@ -14,6 +14,7 @@
     "watch": "tsc --watch --assumeChangesOnlyAffectDirectDependencies --preserveWatchOutput",
     "fix:eslint": "pnpm lint:eslint --fix",
     "fix:prettier": "prettier --write \"**/*.{js,ts,tsx,scss,html,json}\"",
+    "fix:svgo": "pnpm svgo --folder ./svg --pretty",
     "lint:eslint": "eslint --version && eslint src --ext .js,.ts,.tsx",
     "lint:prettier": "prettier \"**/*.{js,ts,tsx,scss,html,json}\" --check",
     "lintcached:eslint": "pnpm lint:eslint --cache --cache-location .eslintcache --cache-strategy content",
@@ -48,6 +49,7 @@
     "prettier-plugin-organize-imports": "^3.2.4",
     "pretty-quick": "^4.0.0",
     "resolve-tspaths": "^0.8.19",
+    "svgo": "^3.3.2",
     "ttf2woff2": "^5.0.0",
     "typescript": "^5.5.2",
     "webfont": "^11.2.26"

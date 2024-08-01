@@ -507,10 +507,10 @@ if (hasDupes) {
 const outString =
   "export const symbolData: {codepoint: number; glyph: string, source?: {tableName: 'Trait' | 'InventoryItem' | 'SandboxPerk' | 'ActivityMode' | 'Objective'| 'ItemCategory' | 'InventoryBucket' | 'Faction' | 'Stat' | 'DamageType', hash: number, fromRichText: boolean }}[] =" +
   JSON.stringify(output, null, 2) +
-  ';\nconst translateManually = ' +
-  JSON.stringify(translateManually, null, 2) +
-  'as const;\n' +
-  'export type TranslateManually = typeof translateManually[number];\n\n' +
+  ';\n\n' +
+  'export type TranslateManually = ' +
+  translateManually.join(' | ') +
+  ';\n\n' +
   '/*\n * Could not find a source for (did the definitions disappear?): \n' +
   failedToFindSource.map((name) => ` * ${name}`).join('\n') +
   '\n\n' +

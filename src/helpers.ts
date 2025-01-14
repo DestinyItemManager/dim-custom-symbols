@@ -5,13 +5,11 @@
 ||
 \*================================================================================================================================*/
 import { execSync } from 'child_process';
-import { writeFile as writeFileFS } from 'fs';
-import fse from 'fs-extra';
-import { promisify } from 'util';
+import { writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { writeFile as writeFileFS } from 'node:fs/promises';
 import { infoLog } from './log.js';
 
 const TAG = 'UTILS';
-const { writeFileSync /*,copyFileSync */ } = fse;
 
 type WriteHook = (fileName: string) => void;
 const writeHooks: WriteHook[] = [];
@@ -71,13 +69,10 @@ export function sortObject<T extends Record<string, any>>(o: T): T {
 
   return sorted as T;
 }
-
-export const writeFilePromise = promisify(writeFileFS);
-
 export function downloadFile(url: string, outputPath: string) {
   return fetch(url)
     .then((x) => x.arrayBuffer())
-    .then((x) => writeFilePromise(outputPath, Buffer.from(x)));
+    .then((x) => writeFileFS(outputPath, Buffer.from(x)));
 }
 
 export function uriToFileName(uri: string) {
@@ -85,8 +80,8 @@ export function uriToFileName(uri: string) {
 }
 
 export function makeDirIfMissing(dir: string) {
-  if (!fse.existsSync(dir)) {
-    fse.mkdirSync(dir);
+  if (!existsSync(dir)) {
+    mkdirSync(dir);
   }
 }
 

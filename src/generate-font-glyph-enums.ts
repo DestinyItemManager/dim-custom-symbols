@@ -1,11 +1,8 @@
 import ttf2woff2 from 'ttf2woff2';
-import { readFileSync } from 'fs';
-import fse from 'fs-extra';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { loadSync } from 'opentype.js';
 import { writeFile } from './helpers.js';
 import { infoLog } from './log.js';
-
-const { writeFileSync } = fse;
 
 const TAG = 'FONT-GLYPH';
 const otfIn = readFileSync('./Destiny-2-Font-Symbols/fonts/destiny_symbols_common.otf');

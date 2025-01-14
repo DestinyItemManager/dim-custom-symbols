@@ -2,9 +2,8 @@ import { parse } from 'opentype.js';
 import { webfont } from 'webfont';
 import { writeFile, toArrayBuffer } from './helpers.js';
 import { infoLog } from './log.js';
-import fse from 'fs-extra';
+import { writeFileSync } from 'node:fs';
 
-const { writeFileSync } = fse;
 const acc: Record<string, number> = {};
 const TAG = 'CUSTOM-GLYPHS';
 

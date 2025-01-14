@@ -20,8 +20,8 @@
     "lintcached:eslint": "pnpm lint:eslint --cache --cache-location .eslintcache --cache-strategy content",
     "lint-report": "pnpm lint:eslint --output-file eslint_report.json --format json",
     "lint-report:cached": "pnpm lintcached:eslint --output-file eslint.results.json --format json",
-    "generate-data-main": "dotenv node built/src/main.js generate-font-glyph-enums generate-custom-glyph-enums generate-symbols",
-    "generate-data-sub": "tsc && resolve-tspaths && dotenv node built/src/main.js",
+    "generate-data-main": "node built/src/main.js generate-font-glyph-enums generate-custom-glyph-enums generate-symbols",
+    "generate-data-sub": "tsc && resolve-tspaths && node built/src/main.js",
     "generate-data": "pnpm build && pnpm generate-data-main"
   },
   "husky": {
@@ -30,16 +30,13 @@
     }
   },
   "devDependencies": {
-    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.10.5",
     "@types/opentype.js": "^1.3.8",
     "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@typescript-eslint/parser": "^8.19.1",
-    "dotenv-cli": "^7.4.2",
     "eslint": "v8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
-    "fs-extra": "^11.2.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
     "opentype.js": "^1.3.4",

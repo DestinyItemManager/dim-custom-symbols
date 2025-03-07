@@ -418,17 +418,17 @@ type fromRichTextManifestSourceData = Record<
 const fromRichTexts: fromRichTextManifestSourceData = {};
 const iconFinder = /(\[[^\]]+\])/g;
 
-objectives.forEach((objective) => {
-  const match = objective.progressDescription?.match(iconFinder);
-  if (match?.length === 1 && !fromRichTexts[match[0]]) {
-    fromRichTexts[match[0]] = ['Objective', objective.hash, false];
-  }
-});
-
 perks.forEach((perk) => {
   const match = perk.displayProperties.description?.match(iconFinder);
   if (match?.length === 1 && !fromRichTexts[match[0]]) {
     fromRichTexts[match[0]] = ['SandboxPerk', perk.hash, false];
+  }
+});
+
+objectives.forEach((objective) => {
+  const match = objective.progressDescription?.match(iconFinder);
+  if (match?.length === 1 && !fromRichTexts[match[0]]) {
+    fromRichTexts[match[0]] = ['Objective', objective.hash, false];
   }
 });
 

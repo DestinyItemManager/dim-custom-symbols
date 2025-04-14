@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "${{github.actor == 'd2ai-bot' && github.event.pull_request.title == 'submodule update: generate-font'}}"
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           # required

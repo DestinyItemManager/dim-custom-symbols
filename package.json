@@ -45,7 +45,7 @@
     "pretty-quick": "^4.1.1",
     "resolve-tspaths": "^0.8.23",
     "svgo": "^3.3.2",
-    "ttf2woff2": "^6.0.1",
+    "ttf2woff2": "^7.0.0",
     "typescript": "^5.8.3",
     "webfont": "^11.2.26"
   },

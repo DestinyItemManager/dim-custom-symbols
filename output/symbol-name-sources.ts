@@ -336,8 +336,8 @@ export const symbolData: {
     codepoint: 57616,
     glyph: '',
     source: {
-      tableName: 'Objective',
-      hash: 44811435,
+      tableName: 'SandboxPerk',
+      hash: 729990577,
       fromRichText: true,
     },
   },
@@ -1835,7 +1835,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 256516254,
+      hash: 1213975022,
       fromRichText: true,
     },
   },
@@ -1844,7 +1844,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 28925697,
+      hash: 515179617,
       fromRichText: true,
     },
   },
@@ -1871,7 +1871,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 190392071,
+      hash: 671993070,
       fromRichText: true,
     },
   },
@@ -1880,7 +1880,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 62818926,
+      hash: 141911950,
       fromRichText: true,
     },
   },
@@ -1898,7 +1898,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 89840062,
+      hash: 212380697,
       fromRichText: true,
     },
   },
@@ -1934,7 +1934,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 393380158,
+      hash: 1089624989,
       fromRichText: true,
     },
   },
@@ -1943,7 +1943,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 538850654,
+      hash: 1047174894,
       fromRichText: true,
     },
   },
@@ -1952,7 +1952,7 @@ export const symbolData: {
     glyph: '󰅀',
     source: {
       tableName: 'Objective',
-      hash: 538850654,
+      hash: 1047174894,
       fromRichText: true,
     },
   },
@@ -1970,7 +1970,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 38253124,
+      hash: 43313268,
       fromRichText: true,
     },
   },
@@ -1979,7 +1979,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 233397309,
+      hash: 1878887814,
       fromRichText: true,
     },
   },
@@ -1988,7 +1988,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 419936834,
+      hash: 1260068656,
       fromRichText: true,
     },
   },
@@ -1997,7 +1997,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'Objective',
-      hash: 169521666,
+      hash: 1588957719,
       fromRichText: true,
     },
   },
@@ -2203,56 +2203,26 @@ export const symbolData: {
   {
     codepoint: 983325,
     glyph: '󰄝',
-    source: {
-      tableName: 'Stat',
-      hash: 2996146975,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983333,
     glyph: '󰄥',
-    source: {
-      tableName: 'Stat',
-      hash: 392767087,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983332,
     glyph: '󰄤',
-    source: {
-      tableName: 'Stat',
-      hash: 1943323491,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983312,
     glyph: '󰄐',
-    source: {
-      tableName: 'Stat',
-      hash: 1735777505,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983323,
     glyph: '󰄛',
-    source: {
-      tableName: 'Stat',
-      hash: 144602215,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983340,
     glyph: '󰄬',
-    source: {
-      tableName: 'Stat',
-      hash: 4244567218,
-      fromRichText: false,
-    },
   },
   {
     codepoint: 983321,
@@ -2304,7 +2274,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'SandboxPerk',
-      hash: 591985846,
+      hash: 200616812,
       fromRichText: true,
     },
   },
@@ -2322,7 +2292,7 @@ export const symbolData: {
     glyph: '',
     source: {
       tableName: 'SandboxPerk',
-      hash: 669536781,
+      hash: 136649446,
       fromRichText: true,
     },
   },
@@ -2331,7 +2301,7 @@ export const symbolData: {
     glyph: '󰄋',
     source: {
       tableName: 'Objective',
-      hash: 140612413,
+      hash: 5020780,
       fromRichText: false,
     },
   },
@@ -2340,7 +2310,7 @@ export const symbolData: {
     glyph: '󰄌',
     source: {
       tableName: 'Objective',
-      hash: 140612412,
+      hash: 72589355,
       fromRichText: false,
     },
   },
@@ -2349,7 +2319,7 @@ export const symbolData: {
     glyph: '󰄍',
     source: {
       tableName: 'Objective',
-      hash: 140612414,
+      hash: 121105404,
       fromRichText: false,
     },
   },
@@ -2394,7 +2364,7 @@ export const symbolData: {
     glyph: '󰂳',
     source: {
       tableName: 'Objective',
-      hash: 436633878,
+      hash: 1328104731,
       fromRichText: false,
     },
   },
@@ -2403,7 +2373,7 @@ export const symbolData: {
     glyph: '󰃂',
     source: {
       tableName: 'Objective',
-      hash: 274399838,
+      hash: 849228675,
       fromRichText: false,
     },
   },
@@ -2411,8 +2381,8 @@ export const symbolData: {
     codepoint: 983220,
     glyph: '󰂴',
     source: {
-      tableName: 'InventoryItem',
-      hash: 820958888,
+      tableName: 'Faction',
+      hash: 1021210278,
       fromRichText: false,
     },
   },
@@ -2456,8 +2426,8 @@ export const symbolData: {
     codepoint: 983164,
     glyph: '󰁼',
     source: {
-      tableName: 'InventoryItem',
-      hash: 3005699685,
+      tableName: 'ActivityMode',
+      hash: 1826469369,
       fromRichText: false,
     },
   },
@@ -2465,8 +2435,8 @@ export const symbolData: {
     codepoint: 983173,
     glyph: '󰂅',
     source: {
-      tableName: 'InventoryItem',
-      hash: 3218214121,
+      tableName: 'SandboxPerk',
+      hash: 2133645639,
       fromRichText: false,
     },
   },
@@ -2576,19 +2546,25 @@ export type TranslateManually =
 
 /*
  * Could not find a source for (did the definitions disappear?): 
-
+ * Mobility
+ * Resilience
+ * Recovery
+ * Discipline
+ * Intellect
+ * Strength
 
  * Unused rich text replacements (these should only be input actions replaced with the mapped buttons by the game): 
  * [Aim Down Sights]
  * [Alternate Weapon Action]
  * [Light Attack]
  * [Heavy Attack]
- * [Air Dodge]
  * [Super]
+ * [###DestinyNamedSubstitutions.ui_player_action_jump_button###]
+ * [Shoot]
+ * [Air Dodge]
  * [Sprint]
  * [afflicted|burdened|cursed]
  * [Block]
- * [Shoot]
  * [Boost]
  * [Air Move]
  * [Brake]

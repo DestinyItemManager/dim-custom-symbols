@@ -318,12 +318,12 @@ const data: [glyph: FontGlyphs | DimCustomSymbols, name?: string][] = [
   [DimCustomSymbols.velocity, 'Velocity'],
 
   // Armor Stats
-  [DimCustomSymbols.mobility, 'Mobility'],
-  [DimCustomSymbols.resilience, 'Resilience'],
-  [DimCustomSymbols.recovery, 'Recovery'],
-  [DimCustomSymbols.discipline, 'Discipline'],
-  [DimCustomSymbols.intellect, 'Intellect'],
-  [DimCustomSymbols.strength, 'Strength'],
+  [DimCustomSymbols.mobility, 'Weapons'],
+  [DimCustomSymbols.resilience, 'Health'],
+  [DimCustomSymbols.recovery, 'Class'],
+  [DimCustomSymbols.discipline, 'Grenade'],
+  [DimCustomSymbols.intellect, 'Super'],
+  [DimCustomSymbols.strength, 'Melee'],
 
   // Armor Slots
   [DimCustomSymbols.helmet, 'Helmet'],

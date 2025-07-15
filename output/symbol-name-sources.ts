@@ -2203,26 +2203,56 @@ export const symbolData: {
   {
     codepoint: 983325,
     glyph: '󰄝',
+    source: {
+      tableName: 'Stat',
+      hash: 2996146975,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983333,
     glyph: '󰄥',
+    source: {
+      tableName: 'Stat',
+      hash: 392767087,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983332,
     glyph: '󰄤',
+    source: {
+      tableName: 'Stat',
+      hash: 1943323491,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983312,
     glyph: '󰄐',
+    source: {
+      tableName: 'Stat',
+      hash: 1735777505,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983323,
     glyph: '󰄛',
+    source: {
+      tableName: 'Objective',
+      hash: 119163662,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983340,
     glyph: '󰄬',
+    source: {
+      tableName: 'Objective',
+      hash: 980790784,
+      fromRichText: false,
+    },
   },
   {
     codepoint: 983321,
@@ -2546,12 +2576,7 @@ export type TranslateManually =
 
 /*
  * Could not find a source for (did the definitions disappear?): 
- * Mobility
- * Resilience
- * Recovery
- * Discipline
- * Intellect
- * Strength
+
 
  * Unused rich text replacements (these should only be input actions replaced with the mapped buttons by the game): 
  * [Aim Down Sights]

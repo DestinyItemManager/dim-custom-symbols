@@ -14,7 +14,7 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v5
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -26,7 +26,7 @@ jobs:
         run: git submodule update --remote --recursive
 
       - name: porcelain check
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         id: data
         with:
           base: HEAD

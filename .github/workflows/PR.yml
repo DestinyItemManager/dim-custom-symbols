@@ -23,7 +23,7 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: pnpm/action-setup@v5
+      - uses: pnpm/action-setup@v6
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -57,7 +57,7 @@ jobs:
 
       - name: Fail the Build w/ Note
         if: steps.data.outputs.changed == 'true' && env.fork_pr
-        uses: actions/github-script@v8.0.0
+        uses: actions/github-script@v9.0.0
         with:
           script: |
             core.setFailed('Please run `pnpm generate-data`')
